@@ -1,0 +1,74 @@
+@font-face {
+  font-family: "Paint Drops";
+  src: url("../fonts/PaintDropsRegular-0WaJo.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --primary-color: #fee715;
+  --secondary-color: #101820;
+  --text-color: #ccec64;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color:rgba(128, 128, 128, 0.311);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.523);
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #e0e0e0;
+}
+
+#banner {
+  margin: 0 auto;
+  max-width: 2500px;
+  max-height: 1450px;
+  height: 100vh;
+  position: relative;
+  background-color: rgba(255, 0, 0, 0.733);
+  background: linear-gradient(to bottom,rgba(11, 11, 11, 0.468),rgba(230, 188, 188, 0.925)),url("../assets/park-3116883.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#canvas1 {
+  background: transparent;
+  max-width: 100%;
+}
+
+#welcome {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 3.5rem;
+  transform: translate(-50%, -50%);
+  font-family: "Paint Drops";
+  /* background-color: white; */
+}
+
+@media screen and (max-width : 1000px) {
+  #welcome{
+    font-size: 2.8rem;
+  }
+}
