@@ -39,16 +39,6 @@ export default class Effect {
       this.mouse.x = -100;
       this.mouse.y = -100;
     });
-
-    // outer_element.addEventListener("touchstart", (e) => {
-    //   this.adjustMouseCoordinates(e);
-    // });
-
-    // outer_element.addEventListener("touchend", (e) => {
-    //   // e.preventDefault();
-    //   this.mouse.x = -100;
-    //   this.mouse.y = -100;
-    // });
   }
 
   //methods
@@ -72,17 +62,7 @@ export default class Effect {
     this.width = width;
     this.height = height;
     this.element = document.getElementById("welcome").getBoundingClientRect();
-    // let gradient = this.context.createLinearGradient(
-    //   0,
-    //   0,
-    //   this.canvas.width,
-    //   this.canvas.height
-    // );
-    // gradient.addColorStop(0, "white");
-    // gradient.addColorStop(0.5, "magenta");
-    // gradient.addColorStop(1, "blue");
-
-    // this.context.fillStyle = gradient;
+   
 
     const canvasRect = this.canvas.getBoundingClientRect();
     this.c_l = canvasRect.left;

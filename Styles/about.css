@@ -1,0 +1,68 @@
+.about {
+  background-color: #020912;
+}
+
+.about_head {
+  color: white;
+  font-family: "Paint Drops";
+  text-align: center;
+  font-size: 3rem;
+  width: 100%;
+  flex-grow: 1;
+  align-self: center;
+  position: relative;
+}
+
+
+
+.about_container {
+  margin: 0 auto;
+  max-width: 2500px;
+  max-height: 1450px;
+  min-height: 100vh;
+  background-color: #020912;
+  position: relative;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  /* align-content: center; */
+  flex-wrap: wrap;
+  z-index: 10;
+}
+
+.about_poster {
+  min-width: 380px;
+  flex : 1 0 calc(50% - 10px);
+  overflow: visible;
+  align-self: flex-start;
+  margin-top: 40px;
+}
+
+
+
+.about_content {
+  flex:1 0 50%;
+  align-self: flex-start;
+  padding: 40px;
+  text-align: center;
+  font-family: sans-serif;
+  /* font-weight: 400; */
+  color: white;
+  font-size: 1.2rem;
+  align-self: flex-start;
+}
+
+.about_btn{
+  color: black;
+  font-size: 1.2rem;
+  padding: 4px 6px;
+  border-radius: 5px;
+  background-color: white;
+  border: none;
+}
+
+@media screen and (max-width:1000px) {
+  .about_content{
+    font-size: 0.8rem;
+  }
+}

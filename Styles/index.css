@@ -40,35 +40,89 @@
 
 #banner {
   margin: 0 auto;
-  max-width: 2500px;
-  max-height: 1450px;
   height: 100vh;
-  position: relative;
-  background-color: rgba(255, 0, 0, 0.733);
-  background: linear-gradient(to bottom,rgba(11, 11, 11, 0.468),rgba(230, 188, 188, 0.925)),url("../assets/park-3116883.jpg");
+  max-width: 2500px; 
+  max-height: 1450px;  
+  background: rgb(234,234,234);
+  background:  linear-gradient(180deg, rgba(234, 234, 234, 0.212) 3%, rgba(0,0,0,0.09576330532212884) 12%, rgba(233,206,206,0) 94%, rgba(255, 255, 255, 0.308) 100%),url("../assets/park-3116883.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 4px solid red; */
 }
 
 #canvas1 {
   background: transparent;
-  max-width: 100%;
+  /* width: 100%; */
+  position: fixed;
 }
 
 #welcome {
   color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  /* position: absolute; */
+  /* top: 50%;
+  left: 50%; */
   font-size: 3.5rem;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
   font-family: "Paint Drops";
+  z-index: 1;
+  position: fixed;
+  transition: transform 0.5s ease;
   /* background-color: white; */
+  
+  
+}
+
+.typing-animation {
+  animation: typing 2s steps(40, end), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #333;
+  }
+}
+
+#grass_container{
+  width: 100%;
+  height:300px;
+
+  /* background-color: #101820; */
+  background-image: url("../assets/grass.png");
+  background-position: 0% 100%;
+  background-size: contain;
+  position: absolute;
+  background-repeat: repeat-x;
+  left: 0;
+  bottom: -5px;
+  z-index: 10;
 }
 
 @media screen and (max-width : 1000px) {
   #welcome{
     font-size: 2.8rem;
   }
+}
+
+
+#first{
+  color: #fee715;
 }
