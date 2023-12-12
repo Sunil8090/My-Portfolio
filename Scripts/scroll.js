@@ -39,6 +39,10 @@ let remove_fn = () => {
 
 add_fn();
 
+
+
+//end of the effect
+
 // animate the about poster
 const sections = document.querySelector(".about");
 const about_content = document.querySelector(".slide");
@@ -55,13 +59,13 @@ function handleIntersection(entries, observer) {
       books.classList.add("books_top");
       pot.classList.add("pot_top");
       person.classList.add("person_top");
-      about_content.classList.add("about_content_form_left");
+      // about_content.classList.add("about_content_form_left");
     } else {
       table.classList.remove("table_top");
       books.classList.remove("books_top");
       pot.classList.remove("pot_top");
       person.classList.remove("person_top");
-      about_content.classList.remove("about_content_form_left");
+      // about_content.classList.remove("about_content_form_left");
     }
   });
 }
@@ -69,7 +73,7 @@ function handleIntersection(entries, observer) {
 const options = {
   root: null, // Use the viewport as the root
   rootMargin: "0px", // No margin around the viewport
-  threshold: 0.3, // Trigger when 50% of the target is visible
+  threshold: 0.2, // Trigger when 50% of the target is visible
 };
 
 const observer = new IntersectionObserver(handleIntersection, options);
@@ -77,8 +81,73 @@ const observer = new IntersectionObserver(handleIntersection, options);
 observer.observe(sections);
 //end of the animation
 
-
 //skills
 let skill_container = document.querySelector(".skill_container");
 
-let icon_arr = ["fa-brands fa-html5","fa-brands fa-css3-alt","fa-brands fa-js","fa-brands fa-react","fa-brands fa-node"];
+let icon_arr = [
+  {
+  src:"devicon-html5-plain",
+  lang:"HTML"
+  }
+  ,
+  {
+    src:"devicon-css3-plain",
+    lang:"CSS"
+  },
+  {
+    src:"devicon-tailwindcss-original-wordmark",
+    lang:"Tailwind CSS"
+  },
+  {
+    src:"devicon-javascript-plain",
+    lang:"JavaScript"
+  },
+  {
+    src:"devicon-react-original",
+    lang:"React"
+  },
+ {
+  src: "devicon-redux-original",
+  lang:"redux"
+ },
+  {
+    src:"devicon-firebase-plain",
+    lang:"FireBase"
+  },
+  {
+    src:"devicon-nodejs-plain",
+    lang:"Node JS"
+  },
+  {
+    src:"devicon-express-original",
+    lang:"Express JS"
+  },
+  {
+    src:"devicon-mongodb-plain",
+    lang:"MongoDB"
+  }
+];
+
+
+
+icon_arr.forEach((element) => {
+  let skill_btn = document.createElement("div");
+  skill_btn.classList.add("skill_button");
+
+  let span1 = document.createElement("span");
+  let span2 = document.createElement("span");
+  let span3 = document.createElement("span");
+  let img = document.createElement("i");
+  img.classList.add(element.src,"svg_icon");
+  span3.append(img);
+  img.style.backgroundColor = "white"
+  let span4 = document.createElement("span");
+
+  let p = document.createElement("p");
+  p.textContent = element.lang
+  p.className = "panner"
+
+  skill_btn.append(span1, span2, span3, span4,p);
+
+  skill_container.append(skill_btn);
+});
