@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta&family=Nova+Square&family=Roboto&display=swap");
+
 @font-face {
   font-family: "Paint Drops";
   src: url("../fonts/PaintDropsRegular-0WaJo.ttf") format("truetype");
@@ -6,9 +8,28 @@
 }
 
 :root {
-  --primary-color: #fee715;
-  --secondary-color: #101820;
-  --text-color: #ccec64;
+  --primary-color: #e70000;
+  --secondary-color: #c50000;
+  --text-color: #fffdef;
+  --background-color: #f1f1f1;
+
+  /* Font */
+  --font-family-main: "Paint Drops";
+  --font-family-primary: "Mukta", sans-serif;
+  --font-family-secondary: "Roboto", sans-serif;
+
+  --heading-1: 2rem;
+  --heading-2: 1.5rem;
+  --font-size: 16px;
+
+  /* Spacing */
+  --spacing-unit: 8px;
+  --container-padding: 20px;
+
+  /* Breakpoints */
+  --mobile: 767px;
+  --tablet: 1023px;
+  --desktop: 1024px;
 }
 
 * {
@@ -17,12 +38,18 @@
   box-sizing: border-box;
 }
 
+body {
+  max-width: 1550px;
+  margin: 0 auto;
+  /* overflow: hidden; */
+}
+
 ::-webkit-scrollbar {
   width: 12px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color:rgba(128, 128, 128, 0.311);
+  background-color: rgba(128, 128, 128, 0.311);
   border-radius: 6px;
 }
 
@@ -39,73 +66,45 @@
 }
 
 #banner {
-  margin: 0 auto;
   height: 100vh;
-  max-width: 2500px; 
-  max-height: 1450px;  
-  background: rgb(234,234,234);
-  background:  linear-gradient(180deg, rgba(234, 234, 234, 0.212) 3%, rgba(0,0,0,0.09576330532212884) 12%, rgba(233,206,206,0) 94%, rgba(255, 255, 255, 0.308) 100%),url("../assets/park-3116883.jpg");
+  max-height: 950px;
+  background: linear-gradient(
+      180deg,
+      rgba(234, 234, 234, 0.212) 3%,
+      rgba(0, 0, 0, 0.09576330532212884) 12%,
+      rgba(233, 206, 206, 0) 94%,
+      rgba(255, 255, 255, 0.308) 100%
+    ),
+    url("../assets/park-3116883.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  position: relative;
   background-attachment: fixed;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 4px solid red; */
+  overflow: hidden;
 }
 
 #canvas1 {
   background: transparent;
-  /* width: 100%; */
   position: fixed;
+  overflow: hidden;
 }
 
 #welcome {
-  color: white;
-  /* position: absolute; */
-  /* top: 50%;
-  left: 50%; */
-  font-size: 3.5rem;
-  /* transform: translate(-50%, -50%); */
-  font-family: "Paint Drops";
-  z-index: 1;
+  color: var(--text-color);
+  font-size: calc(var(--heading-1) + 2rem);
+  font-family: var(--font-family-main);
+  z-index: 5;
   position: fixed;
   transition: transform 0.5s ease;
-  /* background-color: white; */
-  
-  
 }
 
-.typing-animation {
-  animation: typing 2s steps(40, end), blink-caret 0.5s step-end infinite;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #333;
-  }
-}
-
-#grass_container{
+#grass_container {
   width: 100%;
-  height:300px;
-
-  /* background-color: #101820; */
+  height: 300px;
   background-image: url("../assets/grass.png");
   background-position: 0% 100%;
   background-size: contain;
@@ -114,15 +113,11 @@
   left: 0;
   bottom: -5px;
   z-index: 10;
+  overflow: hidden;
 }
 
-@media screen and (max-width : 1000px) {
-  #welcome{
-    font-size: 2.8rem;
+@media screen and (max-width: 767px) {
+  #welcome {
+    font-size: calc(var(--heading-1) + 1rem);
   }
-}
-
-
-#first{
-  color: #fee715;
 }

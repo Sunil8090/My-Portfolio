@@ -1,75 +1,72 @@
-.about {
+.about_container {
   background-color: #020912;
+  position: relative;
+  z-index: 10;
+  margin-top: -10px;
 }
 
 .about_head {
   color: white;
-  font-family: "Paint Drops";
+  font-family: var(--font-family-main);
   text-align: center;
-  font-size: 3rem;
-  width: 100%;
-  flex-grow: 1;
-  align-self: center;
-  position: relative;
+  font-size: calc(var(--heading-1) + 1rem);
+  margin-bottom: 25px;
 }
 
-
-
-.about_container {
-  margin: 0 auto;
-  max-width: 2500px;
-  max-height: 1450px;
-  min-height: 90vh;
-  background-color: #020912;
-  position: relative;
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  /* align-content: center; */
-  flex-wrap: wrap;
-  z-index: 10;
+.about_holder {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .about_poster {
-  min-width: 380px;
-  flex : 1 0 calc(50% - 10px);
+  min-width: 340px;
   overflow: visible;
-  align-self: flex-start;
-  margin-top: 40px;
 }
-
-
 
 .about_content {
-  flex:1 0 50%;
-  align-self: flex-start;
-  padding: 40px;
+  padding: 0 25px;
   text-align: center;
-  font-family: sans-serif;
+  font-family: var(--font-family-primary);
   color: white;
-  font-size: 1.2rem;
-  align-self: flex-start;
+  font-size: calc(var(--heading-2) - 0.3rem);
 }
 
-.about_btn{
+.about_btn {
   color: black;
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: var(--heading-2);
   padding: 4px 10px;
   border-radius: 5px;
   background-color: white;
   border: none;
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
 }
 
-.about_btn:hover{
+.about_btn:hover {
   box-shadow: 0px 0px 13px 0px rgba(203, 31, 31, 0.797);
   color: red;
   transform: scale(1.1);
 }
 
-@media screen and (max-width:1000px) {
-  .about_content{
-    font-size: 0.8rem;
+@media screen and (max-width: 1023px) {
+  .about_holder {
+    grid-template-columns: 1fr;
+  }
+
+  .about_content {
+    font-size: calc(var(--heading-2) - 0.5rem);
+  }
+
+  .about_btn {
+    font-size: calc(var(--heading-2) - 0.3rem);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about_content {
+    font-size: calc(var(--heading-2) - 0.7rem);
+  }
+
+  .about_btn {
+    font-size: calc(var(--heading-2) - 0.5rem);
   }
 }
