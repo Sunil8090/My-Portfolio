@@ -1,0 +1,25 @@
+.Github_container{
+    margin: 0 auto;
+    max-width: 2500px;
+    background-color: #020912;
+    position: relative;
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 10;
+    padding: 100px;
+    overflow: hidden;
+}
+
+.github_head{
+    color: white;
+    font-family: "Paint Drops";
+    text-align: center;
+    font-size: 3rem;
+    width: 100%;
+    flex-grow: 1;
+    align-self: center;
+    margin: 50px 0;
+}

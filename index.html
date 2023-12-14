@@ -18,28 +18,37 @@
     <link rel="stylesheet" href="./Styles/about.css">
     <link rel="stylesheet" href="./Styles/parallax.css">
     <link rel="stylesheet" href="./Styles/skills.css">
+    <link rel="stylesheet" href="./Styles/projects.css">
+    <link rel="stylesheet" href="./Styles/github.css">
+    <link rel="stylesheet" href="./Styles/Contact.css">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
           
   </head>
   <body>
     <!-- nav_bar and the banner of the website -->
-    <section class="Home_page">
+    <section class="Home_page section" id="section_1">
       <header id="banner">
       <!-- start of the navbar -->
-        <div id="nav_bar">
+        <div id="nav_bar_head">
           <h1 id="logo">Sunil<span id="kumar">Kumar<span></h1>
           <nav class="nav_bar">
             <ul class="nav-links">
-              <li class="Home"><a href="">Home</a></li>
-              <li class="About"><a href="">About</a></li>
-              <li class="Projects"><a href="">Projects</a></li>
-              <li class="github"><a href="">Github</a></li>
-              <li class="Skills"><a href="">Skills</a></li>
-              <li class="Contact"><a href="">Contact</a></li>
+              <div class="burgger_close remover">
+                <img src="./assets/close_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+              </div>
+              <li class="Home_link"><a class="nav_link" href="#section_1">Home</a></li>
+              <li class="About_link"><a class="nav_link" href="#section_2">About</a></li>
+              <li class="Skills_link"><a class="nav_link" href="#section_3">Skills</a></li>
+              <li class="Projects_link"><a class="nav_link" href="#section_4">Projects</a></li>
+              <li class="github_link"><a class="nav_link" href="#section_5">Github</a></li>
+              <li class="Contact_link"><a class="nav_link" href="#section_6">Contact</a></li>
+              <a style="text-decoration: none;" href="./assets/Resume.pdf" download="" class="resume">Resume</a>
             </ul>
           </nav>
-          <button class="resume">Resume</button>
+          <div class="burgger remover">
+            <img  src="./assets/menu_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+          </div>
         </div>
       <!-- end of the navbar -->
         <canvas id="canvas1"> </canvas>
@@ -54,7 +63,7 @@
     </section>
     
     <!-- about section -->
-    <section class="about">
+    <section class="about section" id="section_2">
       
       <div class="about_container">
         <h1 class="about_head">About</h1>
@@ -115,12 +124,130 @@
 
    </section>
 
-   <section class="skills">
+   <section class="skills section" id="section_3">
     <div class="skill_container">
     <h1 class="skill_head">Skills</h1>
     </div>
  </section>
 
+ <section class="projects section" id="section_4">
+  <div class="Projects_container">
+
+    <h1 class="project_head">Projects</h1>
+    <div class="project-card project-card_one">
+      <div class="project_img">
+        <img src="./assets/carcompany.png" alt="">
+      </div>
+      <div class="project_details">
+        <h1>Vehicle Spare Parts Website</h1>
+        <div class="stack">
+          <span>html</span>
+          <span>css</span>
+          <span>JavaScript</span>
+          <span>React</span>
+          <span>Firebase</span>
+        </div>
+        <p class="project_description">The Vehicle Spare Parts Website is a platform where users can browse and purchase spare parts for their vehicles. It provides a seamless shopping experience with features like user authentication, product listings, and a shopping cart.</p>
+        <div class="project_links">
+        <a target="_blank" href="https://650992846403785c0ba39b65--luxury-faun-db5a1e.netlify.app/">Live</a>
+        <a target="_blank" href="https://github.com/StarkArnab/glorious-calendar-2511">Github</a>
+        </div>
+      </div>
+    </div>
+    <div class="project-card project-card_two">
+      <div class="project_details">
+        <h1>Myntra Clone</h1>
+        <div class="stack">
+          <span>html</span>
+          <span>css</span>
+          <span>Javascript</span>
+          <span>firebase</span>
+        </div>
+        <p class="project_description">This is a working clone of the online shopping platform MYNTRA. This project is the part of the construct week of Unit-4 at Masai School, This project has been done in order to learn the basic working of the a website by implementing HTML, CSS, Javascript. working on this project was really fun and we learned a lot of new things that goes into building a website. This is our first collaborative project under the guidance of Masai Team to facilitate the full stack web development curriculam.</p>
+        <div class="project_links">
+          <a target="_blank" href="https://masai-myntra-fashion-clone.netlify.app/">Live</a>
+          <a target="_blank" href="https://github.com/SurajYadav007/gitCollab">Github</a>
+          </div>
+      </div>
+      <div class="project_img">
+        <img src="./assets/myntraclone.png" alt="">
+      </div>
+    </div>
+    <div class="project-card project-card_three">
+      <div class="project_img">
+        <img src="./assets/santize.png" alt="">
+      </div>
+      <div class="project_details">
+        <h1>Sanitizer Products Website</h1>
+        <div class="stack">
+          <span>html</span>
+          <span>css</span>
+          <span>Javascript</span>
+          <span>firebase</span>
+        </div>
+        <p class="project_description">Sanitizer Products Website This is the official website for [Your School Name] where we showcase and provide information about our range of sanitizer products. Our aim is to promote hygiene and health within the school community and beyond.</p>
+        <div class="project_links">
+          <a target="_blank" href="https://653694e7d175843431d652d8--jocular-manatee-1fe350.netlify.app/unit5project/homepage">Live</a>
+          <a target="_blank" href="https://github.com/Sunil8090/choice_rice">Github</a>
+          </div>
+      </div>
+    </div>
+    <div class="project-card project-card_four">
+      <div class="project_details">
+        <h1>Vehicle Spare Parts Website</h1>
+        <div class="stack">
+          <span>html</span>
+          <span>css</span>
+          <span>JavaScript</span>
+          <span>React</span>
+          <span>Firebase</span>
+        </div>
+        <p class="project_description">The Vehicle Spare Parts Website is a platform where users can browse and purchase spare parts for their vehicles. It provides a seamless shopping experience with features like user authentication, product listings, and a shopping cart.</p>
+        <div class="project_links">
+          <a href="https://650992846403785c0ba39b65--luxury-faun-db5a1e.netlify.app/">Live</a>
+          <a href="https://github.com/StarkArnab/glorious-calendar-2511">Github</a>
+        </div>
+      </div>
+  
+      <div class="project_img">
+        <img src="./assets/carcompany.png" alt="">
+      </div>
+    </div>
+
+  </div>
+ </section>
+
+
+ <section class="Github section" id="section_5">
+  <div class="Github_container">
+   <h1 class="github_head">Github</h1>
+   <a href="https://git.io/streak-stats"><img src="https://streak-stats.demolab.com?user=sunil8090&theme=radical&hide_border=true" alt="GitHub Streak" /></a>
+   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=sunil8090&theme=2077" alt="">
+  </div>
+ </section>
+
+
+ <section class="Contact section" id="section_6">
+  <div class="Contact_container">
+   <h1 class="contact_head">Contact</h1>
+   <div class="contact_div">
+    <div class="contact_poster">
+      <img src="./assets/contact.svg" alt="">
+     </div>
+     <div class="contact_form">
+       <form action="https://formsubmit.co/nani859095@gmail.com" method="POST" >
+            <input type="text" placeholder="FullName" name="Name" required>
+           <input type="email" placeholder="Email" name="email" required>
+           <input type="hidden" name="_next" value="http://127.0.0.1:5500/">
+           <input type="number" placeholder="Mobile Number" name="Mobile" required>
+           <textarea cols="30" rows="10" placeholder=" Your Message" name="Message"></textarea>
+           <button type="submit">Submit</button>
+       </form>
+     </div>
+   </div>
+   
+  </div>
+ </section>
     <!-- end of the html -->
 
     <script
@@ -136,5 +263,6 @@
       src="./Scripts/particles.js"
     ></script>
     <script type="module" src="./Scripts/scroll.js"></script>
+    <script type="module" src="./Scripts/navbar.js"></script>
   </body>
 </html>

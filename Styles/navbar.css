@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Nova+Square&family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nova+Square&family=Roboto&display=swap");
 
-#nav_bar {
+#nav_bar_head {
   background: rgb(0, 0, 0);
   background: linear-gradient(
     90deg,
@@ -12,7 +12,7 @@
     rgba(0, 0, 0, 1) 100%
   );
   color: white;
-  width: 95vw;
+  width: 100vw;
   max-width: 2220px;
   display: flex;
   justify-content: space-between;
@@ -20,7 +20,7 @@
   position: fixed;
   top: 2px;
   padding: 8px 30px;
-  border-radius: 30px;
+  /* border-radius: 30px; */
   z-index: 100;
 }
 
@@ -39,8 +39,7 @@
   font-weight: 500;
 }
 
-
-.nav-links a{
+.nav-links a {
   text-decoration: none;
   color: white;
 }
@@ -86,8 +85,50 @@ a:hover {
   }
 }
 
-@media screen and (max-width: 851px) {
-  .nav-links {
+.active-link {
+  background-color: rgba(255, 0, 0, 0.865);
+}
+
+.nav_bar {
+  transition: all 0.3s linear;
+}
+
+/* side bar code */
+
+/* @media screen and (min-width: 852px) {
+  #burgger {
     display: none;
   }
+
+  #burgger_closed {
+    display: none;
+  }
+} */
+.remover{
+  display: none;
 }
+
+/* .burgger_close {
+  display: none;
+} */
+
+@media screen and (max-width: 851px) {
+  .nav_bar {
+    position: absolute;
+    background-color: rgba(21, 21, 21, 0.53);
+    backdrop-filter: blur(10px);
+    height: 90vh;
+    top: 0;
+    left: 110%;
+    width: 250px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 10px;
+  }
+}
+
+

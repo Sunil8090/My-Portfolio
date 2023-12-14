@@ -1,0 +1,64 @@
+.Contact_container {
+  margin: 0 auto;
+  max-width: 2500px;
+  background-color: #020912;
+  position: relative;
+  z-index: 10;
+  padding: 100px;
+  overflow: hidden;
+}
+
+.contact_head {
+  color: white;
+  font-family: "Paint Drops";
+  text-align: center;
+  font-size: 3rem;
+  width: 100%;
+  flex-grow: 1;
+  align-self: center;
+  margin: 50px 0;
+}
+
+.contact_div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.contact_poster{
+   max-width: 700px;
+}
+
+.contact_poster img{
+    width: 100%;
+}
+
+.contact_form{
+    width: 100%;
+}
+
+.contact_form form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.contact_form input,button{
+    padding: 10px;
+    color: black;
+}
+
+textarea{
+  padding: 10px;
+}
+
+@media screen and (max-width:1000px) {
+    .contact_div {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      
+}

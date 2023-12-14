@@ -39,8 +39,6 @@ let remove_fn = () => {
 
 add_fn();
 
-
-
 //end of the effect
 
 // animate the about poster
@@ -86,49 +84,46 @@ let skill_container = document.querySelector(".skill_container");
 
 let icon_arr = [
   {
-  src:"devicon-html5-plain",
-  lang:"HTML"
-  }
-  ,
-  {
-    src:"devicon-css3-plain",
-    lang:"CSS"
+    src: "devicon-html5-plain",
+    lang: "HTML",
   },
   {
-    src:"devicon-tailwindcss-original-wordmark",
-    lang:"Tailwind CSS"
+    src: "devicon-css3-plain",
+    lang: "CSS",
   },
   {
-    src:"devicon-javascript-plain",
-    lang:"JavaScript"
+    src: "devicon-tailwindcss-original-wordmark",
+    lang: "Tailwind CSS",
   },
   {
-    src:"devicon-react-original",
-    lang:"React"
-  },
- {
-  src: "devicon-redux-original",
-  lang:"redux"
- },
-  {
-    src:"devicon-firebase-plain",
-    lang:"FireBase"
+    src: "devicon-javascript-plain",
+    lang: "JavaScript",
   },
   {
-    src:"devicon-nodejs-plain",
-    lang:"Node JS"
+    src: "devicon-react-original",
+    lang: "React",
   },
   {
-    src:"devicon-express-original",
-    lang:"Express JS"
+    src: "devicon-redux-original",
+    lang: "redux",
   },
   {
-    src:"devicon-mongodb-plain",
-    lang:"MongoDB"
-  }
+    src: "devicon-firebase-plain",
+    lang: "FireBase",
+  },
+  {
+    src: "devicon-nodejs-plain",
+    lang: "Node JS",
+  },
+  {
+    src: "devicon-express-original",
+    lang: "Express JS",
+  },
+  {
+    src: "devicon-mongodb-plain",
+    lang: "MongoDB",
+  },
 ];
-
-
 
 icon_arr.forEach((element) => {
   let skill_btn = document.createElement("div");
@@ -138,16 +133,102 @@ icon_arr.forEach((element) => {
   let span2 = document.createElement("span");
   let span3 = document.createElement("span");
   let img = document.createElement("i");
-  img.classList.add(element.src,"svg_icon");
+  img.classList.add(element.src, "svg_icon");
   span3.append(img);
-  img.style.backgroundColor = "white"
+  img.style.backgroundColor = "white";
   let span4 = document.createElement("span");
 
   let p = document.createElement("p");
-  p.textContent = element.lang
-  p.className = "panner"
+  p.textContent = element.lang;
+  p.className = "panner";
 
-  skill_btn.append(span1, span2, span3, span4,p);
+  skill_btn.append(span1, span2, span3, span4, p);
 
   skill_container.append(skill_btn);
+});
+
+//smooth scrool
+
+let home = document.querySelector(".Home_link");
+let about = document.querySelector(".About_link");
+let skills = document.querySelector(".Skills_link");
+let projects = document.querySelector(".Projects_link");
+let github = document.querySelector(".github_link");
+let contact = document.querySelector(".Contact_link");
+
+let Home_page = document.querySelector(".Home_page");
+let about_page = document.querySelector(".about");
+let skills_page = document.querySelector(".skills");
+let projects_page = document.querySelector(".projects");
+let github_page = document.querySelector(".Github");
+let contact_page = document.querySelector(".Contact");
+
+home.addEventListener("click", (e) => {
+  e.preventDefault();
+  Home_page.scrollIntoView({ behavior: "smooth" });
+});
+
+about.addEventListener("click", (e) => {
+  e.preventDefault();
+  about_page.scrollIntoView({ behavior: "smooth" });
+});
+
+skills.addEventListener("click", (e) => {
+  e.preventDefault();
+  skills_page.scrollIntoView({ behavior: "smooth" });
+});
+
+projects.addEventListener("click", (e) => {
+  e.preventDefault();
+  projects_page.scrollIntoView({ behavior: "smooth" });
+});
+
+github.addEventListener("click", (e) => {
+  e.preventDefault();
+  github_page.scrollIntoView({ behavior: "smooth" });
+});
+
+contact.addEventListener("click", (e) => {
+  e.preventDefault();
+  contact_page.scrollIntoView({ behavior: "smooth" });
+});
+
+//highlight the navlinks
+
+function handleIntersection_links(entries, observer_links) {
+  entries.forEach((entry) => {
+    const sectionId = entry.target.id;
+    console.log(sectionId,entry);
+    const link = document.querySelector(`.nav_link[href="#${sectionId}"]`);
+    if (entry.isIntersecting) {
+      link.classList.add("active-link")
+      // document.querySelectorAll(".nav_link").forEach((link) => {
+      //   link.classList.remove("active-link")
+      // });
+
+      // // Find the corresponding navigation link and add the active class
+      // const targetLinkId = entry.target.getAttribute("id");
+      // const targetLink = document.querySelector(
+      //   `.nav_link[href="#${targetLinkId}"]`
+      // );
+      // console.log(targetLink)
+      // if (targetLink) {
+      //   targetLink.classList.add("active-link")
+      // }
+    }else{
+      link.classList.remove("active-link")
+    }
+  });
+}
+
+// Create an intersection observer
+const observer_links = new IntersectionObserver(handleIntersection_links, {
+  root: null,
+  rootMargin: '-48% 0px -48% 0px', // Adjust the rootMargin to observe only when the middle of the target is in the middle of the screen
+  threshold: 0, // Adjust the threshold as needed
+});
+
+// Target all sections with the class "observe-section"
+document.querySelectorAll("section").forEach((section) => {
+  observer_links.observe(section);
 });
