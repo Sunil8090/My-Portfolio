@@ -13,6 +13,7 @@
   );
   color: white;
   width: 100vw;
+  height: 55px;
   max-width: 2220px;
   display: flex;
   justify-content: space-between;
@@ -57,12 +58,13 @@ a:hover {
   font-size: 1rem;
   border: none;
   border-radius: 20px;
-  color: black;
+  color: white;
   background-color: white;
   outline: 1px solid white;
   transition: all 0.1s linear 0s;
   font-family: "Paint Drops";
   font-weight: 600;
+  margin-left: 30px;
 }
 
 .resume:hover {
@@ -86,7 +88,10 @@ a:hover {
 }
 
 .active-link {
-  background-color: rgba(255, 0, 0, 0.865);
+  padding: 6px;
+  border-radius: 5px;
+  color: black;
+  background-color: rgba(201, 189, 189, 0.744);
 }
 
 .nav_bar {
@@ -95,40 +100,44 @@ a:hover {
 
 /* side bar code */
 
-/* @media screen and (min-width: 852px) {
+@media screen and (min-width: 851px) {
   #burgger {
     display: none;
   }
 
-  #burgger_closed {
+  #burgger_close {
     display: none;
   }
-} */
-.remover{
-  display: none;
 }
-
-/* .burgger_close {
-  display: none;
-} */
 
 @media screen and (max-width: 851px) {
   .nav_bar {
     position: absolute;
     background-color: rgba(21, 21, 21, 0.53);
     backdrop-filter: blur(10px);
-    height: 90vh;
+    height: 100vh;
     top: 0;
-    left: 110%;
-    width: 250px;
+    left: 100%;
+    width: 100%;
   }
 
   .nav-links {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
     padding-top: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .burgger_close {
+    align-self: flex-start;
+    margin: 10px;
+  }
+
+  .resume{
+    align-self: center;
+    font-size: 1.5rem;
+    padding: 10px;
+    margin: 0;
   }
 }
-
-

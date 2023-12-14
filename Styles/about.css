@@ -53,11 +53,19 @@
 
 .about_btn{
   color: black;
-  font-size: 1.2rem;
-  padding: 4px 6px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 4px 10px;
   border-radius: 5px;
   background-color: white;
   border: none;
+  transition: all 0.3s linear;
+}
+
+.about_btn:hover{
+  box-shadow: 0px 0px 13px 0px rgba(203, 31, 31, 0.797);
+  color: red;
+  transform: scale(1.1);
 }
 
 @media screen and (max-width:1000px) {

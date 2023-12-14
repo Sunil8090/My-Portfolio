@@ -198,23 +198,9 @@ contact.addEventListener("click", (e) => {
 function handleIntersection_links(entries, observer_links) {
   entries.forEach((entry) => {
     const sectionId = entry.target.id;
-    console.log(sectionId,entry);
     const link = document.querySelector(`.nav_link[href="#${sectionId}"]`);
     if (entry.isIntersecting) {
       link.classList.add("active-link")
-      // document.querySelectorAll(".nav_link").forEach((link) => {
-      //   link.classList.remove("active-link")
-      // });
-
-      // // Find the corresponding navigation link and add the active class
-      // const targetLinkId = entry.target.getAttribute("id");
-      // const targetLink = document.querySelector(
-      //   `.nav_link[href="#${targetLinkId}"]`
-      // );
-      // console.log(targetLink)
-      // if (targetLink) {
-      //   targetLink.classList.add("active-link")
-      // }
     }else{
       link.classList.remove("active-link")
     }
@@ -231,4 +217,32 @@ const observer_links = new IntersectionObserver(handleIntersection_links, {
 // Target all sections with the class "observe-section"
 document.querySelectorAll("section").forEach((section) => {
   observer_links.observe(section);
+});
+
+
+
+
+
+//projects
+function handleIntersection_project(entries, observer_links) {
+  entries.forEach((entry) => {
+    const target = entry.target;
+    console.log(target)
+    if (entry.isIntersecting) {
+      target.style.transform = "scale(1)"
+    }else{
+      target.style.transform = "scale(0)"
+    }
+  });
+}
+
+const observer_project = new IntersectionObserver(handleIntersection_project, {
+  root: null, 
+  rootMargin: '0px 0px 0px 0px',
+  threshold: 0, // Adjust the threshold as needed
+});
+
+// Target all sections with the class "observe-section"
+document.querySelectorAll(".project-card").forEach((project) => {
+  observer_project.observe(project);
 });

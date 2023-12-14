@@ -53,6 +53,8 @@
 .project-card {
   gap: 20px;
   margin: 40px 0;
+  transform: scale(0);
+  transition: all 0.5s ease-in-out;
 }
 
 .project-card_one {
@@ -106,6 +108,7 @@
   display: flex;
   gap: 10px;
   margin: 20px 0;
+  flex-wrap: wrap;
 }
 
 .stack span {
@@ -137,6 +140,7 @@
   font-size: 1.5rem;
   cursor: pointer;
   border-radius: 10px;
+  transition: all .2s linear;
   /* width: 50px; */
 }
 
@@ -144,4 +148,10 @@
 .project_links > :last-child{
   color: white;
   background-color: rgb(0, 0, 0);
+}
+
+.project_links a:hover{
+  box-shadow: 0px 0px 13px 0px rgba(203, 31, 31, 0.797);
+  color: red;
+  transform: scale(1.1);
 }
