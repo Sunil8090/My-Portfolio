@@ -45,10 +45,6 @@
   color: white;
 }
 
-a:hover {
-  color: red;
-}
-
 .nav-links {
   font-size: 1.2rem;
 }
@@ -108,6 +104,10 @@ a:hover {
   #burgger_close {
     display: none;
   }
+
+  a:hover {
+    color: red;
+  }
 }
 
 @media screen and (max-width: 851px) {
@@ -134,7 +134,7 @@ a:hover {
     margin: 10px;
   }
 
-  .resume{
+  .resume {
     align-self: center;
     font-size: 1.5rem;
     padding: 10px;
