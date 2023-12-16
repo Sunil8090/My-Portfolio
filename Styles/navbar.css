@@ -37,6 +37,11 @@
   font-weight: 500;
 }
 
+
+.active-link{
+  border-bottom: 2px solid white;
+}
+
 .nav-links a {
   text-decoration: none;
   color: white;
@@ -80,6 +85,8 @@
 .nav_bar {
   transition: all 0.3s linear;
 }
+
+
 
 /* side bar code */
 
@@ -133,7 +140,7 @@
   }
 
   a:hover {
-    color: var(--primary-color);
+    color: red;
   }
 }
 

@@ -1,6 +1,6 @@
 let elem = document.querySelector("#welcome");
 let add_remove = document.querySelector(".add_remove");
-let str = " Wonder we are there!";
+let str = " I am a Full Stack Developer";
 
 document.addEventListener("scroll", function () {
   const scrollPosition = window.scrollY;
@@ -195,14 +195,26 @@ contact.addEventListener("click", (e) => {
 
 //highlight the navlinks
 
+let personal_details = document.getElementById("personal_details");
+
 function handleIntersection_links(entries, observer_links) {
   entries.forEach((entry) => {
     const sectionId = entry.target.id;
     const link = document.querySelector(`.nav_link[href="#${sectionId}"]`);
     if (entry.isIntersecting) {
-      link.classList.add("active-link")
-    }else{
-      link.classList.remove("active-link")
+      link.classList.add("active-link");
+
+      if (sectionId == "section_6") {
+        personal_details.style.transform = "translateY(0) scale(1)";
+        personal_details.style.opacity = 1;
+      }
+    } else {
+      if (sectionId == "section_6") {
+        personal_details.style.transform = "translateY(150px) scale(0)";
+        personal_details.style.opacity = 0;
+      }
+
+      link.classList.remove("active-link");
     }
   });
 }
@@ -210,7 +222,7 @@ function handleIntersection_links(entries, observer_links) {
 // Create an intersection observer
 const observer_links = new IntersectionObserver(handleIntersection_links, {
   root: null,
-  rootMargin: '-48% 0px -48% 0px', // Adjust the rootMargin to observe only when the middle of the target is in the middle of the screen
+  rootMargin: "-50% 0px -50% 0px", // Adjust the rootMargin to observe only when the middle of the target is in the middle of the screen
   threshold: 0, // Adjust the threshold as needed
 });
 
@@ -219,30 +231,58 @@ document.querySelectorAll("section").forEach((section) => {
   observer_links.observe(section);
 });
 
-
-
-
-
 //projects
 function handleIntersection_project(entries, observer_links) {
   entries.forEach((entry) => {
     const target = entry.target;
-    console.log(target)
     if (entry.isIntersecting) {
-      target.style.transform = "scale(1)"
-    }else{
-      target.style.transform = "scale(0)"
+      target.style.transform = "scale(1)";
+    } else {
+      target.style.transform = "scale(0)";
     }
   });
 }
 
 const observer_project = new IntersectionObserver(handleIntersection_project, {
-  root: null, 
-  rootMargin: '0px 0px 0px 0px',
-  threshold: 0, // Adjust the threshold as needed
+  root: null,
+  rootMargin: "0px 0px 0px 0px",
+  threshold: 0,
 });
 
-// Target all sections with the class "observe-section"
 document.querySelectorAll(".project-card").forEach((project) => {
   observer_project.observe(project);
 });
+
+//end point
+const svg = document.getElementById("scrollCircle");
+svg.style.display = "none";
+
+svg.addEventListener("click", () => {
+  Home_page.scrollIntoView({ behavior: "smooth" });
+});
+
+// Function to handle scroll event
+function handleScroll() {
+  // Calculate the percentage scrolled
+  const scrollPercentage =
+    (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+
+  if (scrollPercentage > 5) {
+    svg.style.display = "block";
+  } else {
+    svg.style.display = "none";
+  }
+
+  // Calculate the corresponding dash offset based on the percentage
+  const circumference = 188.49556; // Circumference of the circle
+  const dashOffset = ((100 - scrollPercentage) / 100) * circumference;
+
+  // Update the stroke-dashoffset attribute
+  svg.querySelector("circle").setAttribute("stroke-dashoffset", dashOffset);
+}
+
+// Attach the handleScroll function to the scroll event
+window.addEventListener("scroll", handleScroll);
+
+// Trigger the handleScroll function initially to set the initial state
+handleScroll();

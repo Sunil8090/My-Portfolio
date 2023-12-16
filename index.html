@@ -23,15 +23,22 @@
     <link rel="stylesheet" href="./Styles/Contact.css">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
           
   </head>
   <body>
+    <svg height="80" width="80" id="scrollCircle">
+      <circle cx="40" cy="40" r="30" stroke="red" stroke-width="5"
+              fill="white" stroke-dasharray="188.49556" stroke-dashoffset="0" />
+      <svg x="16" y="16" xmlns="http://www.w3.org/2000/svg" height="50" viewBox="0 -960 960 960" width="50"><path d="m296-224-56-56 240-240 240 240-56 56-184-183-184 183Zm0-240-56-56 240-240 240 240-56 56-184-183-184 183Z"/></svg>
+    </svg>
+    
     <!-- nav_bar and the banner of the website -->
     <section class="Home_page section" id="section_1">
       <header id="banner">
       <!-- start of the navbar -->
         <div id="nav_bar_head">
-          <h1 id="logo">Sunil<span id="kumar">Kumar<span></h1>
+          <h1 id="logo">&#60;Sunil<span id="kumar">Kumar/><span></h1>
           <nav class="nav_bar">
             <ul class="nav-links">
               <div class="burgger_close" id="burgger_close">
@@ -52,9 +59,9 @@
         </div>
       <!-- end of the navbar -->
         <canvas id="canvas1"> </canvas>
-        <h1 id="welcome">
-          WellCome
-          <p class="add_remove" style="font-size: 20px; text-align: center; color:white; height: 18px;"></p>
+        <h1 style="text-align: center;" id="welcome">
+          Hello<br> I'm Sunil kumar
+          <p class="add_remove" style="font-size: 30px; text-align: center; color:white; height: 18px;"></p>
         </h1>
         <div id="grass_container"></div>
       </header>
@@ -64,6 +71,9 @@
     <section class="about section" id="section_2">
       
       <div class="about_container">
+        <div class="background_anime">
+          <div></div>
+        </div>
         <h1 class="about_head">About</h1>
         <div class="about_holder">
           <div class="about_poster">
@@ -107,16 +117,17 @@
           <div class="about_content">
             <p class="slide">
               <!-- <div style="height: 4px; background-color: red;"></div> -->
-              Howdy! 🌞 I'm Sunil Kumar, a budding web developer on a mission to make the internet a cooler place. By day, I'm conquering the coding world, and by any free moment, you'll catch me outdoors, attempting to master the art of not tripping over my own feet in various games. 😅
-  
-              I bring a mix of coding prowess and a love for outdoor antics to the table. Let's build some websites, and who knows, maybe one day I'll code a game where I'm the undisputed champion – both online and on the field! 🚀
-              
-              Ready to bring some coding magic to your project? Let's chat! 🚀✨</p>
+              <img width="200px" height="200px" style="float: left;border-radius: 50%;" src="./assets/profile.png" alt="">
+              Hey there! 👋 I'm a Full Stack Web Developer, well-versed in the MERN Stack. I graduated from Masai's Full Stack Web Development Course and I have gone through 1200+ hours of training along the way.
+
+In my coding toolbox, you'll find React, Redux, JAVA, Node, Express, MongoDB, HTML, CSS, JavaScript, and Git – the essentials for building cool stuff.
+
+I'm all about crafting clean, efficient code and love tackling challenges on both the front and back ends. Let's team up, turn ideas into reality, and make some tech magic happen! Reach out to me at Contact Me. 🚀💻</p>
               <br>
               <br>
-              <div style="display: flex;justify-content: space-around;">
-                <button class="about_btn">Resume</button>
-                <button class="about_btn">Github</button>
+              <div id="about_links" style="display: flex;justify-content: space-around;">
+                <a style="text-decoration: none;" class="about_btn" href="./assets/Resume.pdf" download="">Resume</a>
+                <a target="_blank" style="text-decoration: none;" href="https://github.com/Sunil8090" class="about_btn">Github</a>
               </div>
           </div>
         </div>
@@ -126,6 +137,9 @@
 
    <section class="skills section" id="section_3">
      <div class="skill_container">
+      <div class="background_anime_skill">
+        <div></div>
+      </div>
       <h1 class="skill_head">Skills</h1>
     </div>
  </section>
@@ -204,8 +218,8 @@
         </div>
         <p class="project_description">The Vehicle Spare Parts Website is a platform where users can browse and purchase spare parts for their vehicles. It provides a seamless shopping experience with features like user authentication, product listings, and a shopping cart.</p>
         <div class="project_links">
-          <a href="https://650992846403785c0ba39b65--luxury-faun-db5a1e.netlify.app/">Live</a>
-          <a href="https://github.com/StarkArnab/glorious-calendar-2511">Github</a>
+          <a target="_blank" href="https://650992846403785c0ba39b65--luxury-faun-db5a1e.netlify.app/">Live</a>
+          <a target="_blank" href="https://github.com/StarkArnab/glorious-calendar-2511">Github</a>
         </div>
       </div>
   
@@ -220,10 +234,13 @@
 
  <section class="Github section" id="section_5">
   <div class="Github_container">
+    <div class="background_anime_github">
+      <div></div>
+    </div>
    <h1 class="github_head">Github</h1>
    <div class="github_holder">
     <div id="git_one">
-      <a href="https://git.io/streak-stats">
+      <a href="#">
        <img src="https://streak-stats.demolab.com?user=sunil8090&theme=radical&hide_border=true" alt="GitHub Streak" />
      </a>
     </div>
@@ -238,9 +255,13 @@
    <h1 class="contact_head">Contact</h1>
    <div class="contact_div">
     <div class="contact_poster">
-      <img src="./assets/contact.svg" alt="">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61297.24547698944!2d77.31098309373635!3d16.216437377849505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc9d70ca7294361%3A0x6e9f50d792169ee!2sRaichur%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1702684023554!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
      </div>
      <div class="contact_form">
+      <div id="personal_details">
+        <a href="mailto:sunilkumar859095@gmail.com"><i fill="white" class="fa-regular fa-envelope"></i> &nbsp; sunilkumar859095@gmail.com</a>
+        <a href="tel:1234567890"><i class="fa-solid fa-phone"></i> &nbsp;+918150063783</a>
+      </div class="form_container">
        <form action="https://formsubmit.co/nani859095@gmail.com" method="POST" >
             <input type="text" placeholder="FullName" name="Name" required>
            <input type="email" placeholder="Email" name="email" required>

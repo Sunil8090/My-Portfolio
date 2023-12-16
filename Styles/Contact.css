@@ -4,6 +4,7 @@
   position: relative;
   z-index: 10;
   padding: 40px;
+  padding-bottom: 150px;
   overflow: hidden;
   margin-top: -10px;
 }
@@ -23,40 +24,127 @@
   gap: 40px;
 }
 
-.contact_poster{
-   max-width: 700px;
+.contact_poster {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.contact_poster img{
-    width: 100%;
+.contact_poster iframe {
+  width: 100%;
+  filter: invert(100%);
 }
 
-.contact_form{
-    width: 90%;
+.contact_form {
+  width: 90%;
+  margin: 0 auto;
 }
 
-.contact_form form{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 10px;
+.contact_form form {
+  position: relative;
+  background-color: #020912;
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  z-index: 1;
 }
 
-.contact_form input,button{
-    padding: 10px;
-    color: black;
+.contact_form input,
+button {
+  padding: 10px;
+  color: black;
 }
 
-textarea{
+.contact_form button {
+  padding: 10px;
+  color: black;
+  font-family: var(--font-family-main);
+  font-size: calc(var(--heading-1) - 0.7rem);
+}
+
+textarea {
   padding: 10px;
 }
 
-@media screen and (max-width:1000px) {
-    .contact_div {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-      
+#personal_details {
+  margin-bottom: 15px;
+  font-family: var(--font-family-primary);
+  transition: all 0.4s linear;
+  position: relative;
+  transform: translateY(150px) scale(0);
+  opacity: 0;
+  z-index: 0;
+}
+
+/* .personal_details_add{
+  animation: personal_detail 0.4s 1;
+  animation-fill-mode: forwards;
+  
+}
+
+.personal_details_remove{
+  animation: personal_detail_remove 0.4s 1;
+  animation-fill-mode: forwards;
+} */
+
+/* @keyframes personal_detail {
+  0% {
+    opacity: 0;
+    transform: translateY(150px) scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes personal_detail_remove {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(150px) scale(0);
+  }
+} */
+
+#personal_details a {
+  font-size: 1rem;
+  display: inline-block;
+  margin: 2px;
+  /* padding: 5px 10px; */
+  text-decoration: none;
+  background-color: white;
+  padding: 10px 25px;
+  border-radius: 10px;
+  color: black;
+}
+
+
+#personal_details a:hover {
+  background-color: black;
+  color: white;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+  .contact_div {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  #personal_details a {
+    font-size: 0.9rem;
+  }
+
+  .contact_form {
+    grid-row: 1;
+  }
 }

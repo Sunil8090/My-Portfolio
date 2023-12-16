@@ -1,4 +1,4 @@
-.Github_container{
+.Github_container {
     margin: 0 auto;
     background-color: #020912;
     position: relative;
@@ -6,38 +6,86 @@
     padding: 20px 10px;
     overflow: hidden;
     margin-top: -10px;
-}
-
-.github_head{
+    max-width: 1550px;
+  }
+  
+  .github_head {
     color: white;
     font-family: var(--font-family-main);
     text-align: center;
     font-size: calc(var(--heading-1) + 1rem);
     width: 100%;
     margin-bottom: 45px;
-}
+  }
+  
+  .github_holder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .github_holder img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 5px; /* Optional: add some spacing between images */
+  }
 
-.github_holder{
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   gap: 10px;
-}
+  #git_one{
+    flex: 1 0 100%;
+    /* margin: 0 auto; */
+  }
 
-/* #git_one{
-    width: 100%;
-
-}
-
-#git_one a {
-
+  #git_one a {
+    display: block;
+    margin: 0 auto;
     text-align: center;
-} */
-
-@media screen and (max-width: 1200px) {
-    .github_holder{
-        grid-template-columns: 1fr;
-        justify-content: center;
-        align-items: center;
-        /* margin: auto; */
+  }
+  
+  .streak-image {
+    max-width: 200px;
+  }
+  
+  .profile-image {
+    max-width: 300px;
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .github_holder {
+      flex-direction: column;
+      align-items: center;
     }
-}
+  }
+  
+
+  .background_anime_github{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: gray;
+    transform: translate(-50%,-50%);
+    outline: 2px solid gray;
+    animation: ball_anmie 1s infinite;
+  }
+  
+  .background_anime_github div{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: gray;
+    outline: 2px solid gray;
+    animation: ball_anmie 1s 0.1s infinite;
+  }
+  
+  @keyframes ball_anmie {
+    0%{
+       outline-offset: 1px;
+    }
+    100%{
+      outline-offset: 120px;
+      opacity: 0;
+    }
+  }

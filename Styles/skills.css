@@ -14,6 +14,7 @@
   z-index: 10;
   padding: 60px 10px 35px 10px;
   margin-top: -10px;
+  overflow: hidden;
 }
 
 .skill_head {
@@ -29,7 +30,7 @@
 
 .panner {
   position: absolute;
-  top: 100%;
+  top: 120%;
   color: white;
   left: 50%;
   transform: translateX(-50%);
@@ -141,4 +142,38 @@
   transform: translate(30px, 16px);
   background-color: rgba(0, 255, 255, 0.301);
   transition-delay: 0.2s;
+}
+
+
+.background_anime_skill{
+  position: absolute;
+  z-index: -1;
+  top: 100%;
+  left: 100%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: gray;
+  transform: translate(-50%,-50%);
+  outline: 2px solid gray;
+  animation: ball_anmie 1s infinite;
+}
+
+.background_anime_skill div{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: gray;
+  outline: 2px solid gray;
+  animation: ball_anmie 1s 0.1s infinite;
+}
+
+@keyframes ball_anmie {
+  0%{
+     outline-offset: 1px;
+  }
+  100%{
+    outline-offset: 120px;
+    opacity: 0;
+  }
 }
