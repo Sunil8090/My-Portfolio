@@ -1,7 +1,9 @@
 import Effect from "./effect.js";
 
+
+
 let canvas = document.getElementById("canvas1");
-let outer_element = document.getElementById("banner")
+let outer_element = document.getElementById("banner");
 let ctx = canvas.getContext("2d");
 
 canvas.width = outer_element.offsetWidth;
@@ -14,15 +16,13 @@ canvas.height = outer_element.offsetHeight;
 // gradient.addColorStop(1, "#800020");
 // ctx.fillStyle = gradient;
 
-
-
-  const effect = new Effect(canvas, ctx);
-  function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    // ctx.fillStyle = "rgba(255, 255, 255,0.3)";
-    // ctx.fillRect(0, 0, canvas.width, canvas.height);
-    effect.handleParticles();
-    requestAnimationFrame(animate);
-  }
+const effect = new Effect(canvas, ctx);
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  // ctx.fillStyle = "rgba(255, 255, 255,0.3)";
+  // ctx.fillRect(0, 0, canvas.width, canvas.height);
+  effect.handleParticles();
+  requestAnimationFrame(animate);
+}
 
 animate();

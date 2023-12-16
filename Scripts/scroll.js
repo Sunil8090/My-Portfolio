@@ -1,3 +1,13 @@
+// let section = document.querySelectorAll("section");
+// let loading = document.querySelector(".loading");
+// window.onload = function () {
+//   loading.style.display = "none";
+//   section.forEach((elem) => {
+//     elem.style.display = "block";
+//   });
+// };
+
+
 let elem = document.querySelector("#welcome");
 let add_remove = document.querySelector(".add_remove");
 let str = " I am a Full Stack Developer";
