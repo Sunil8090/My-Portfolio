@@ -55,6 +55,12 @@
   font-size: 90px;
 }
 
+#my_profile{
+  outline: 1px solid white;
+  outline-offset: 2px;
+  background-color: rgba(255, 255, 255, 0.779);
+}
+
 @media screen and (max-width: 600px) {
   .skill_button {
     width: 70px;
@@ -63,6 +69,10 @@
   }
   .svg_icon {
     font-size: 70px;
+  }
+
+  #my_profile{
+    width: 100%;
   }
 }
 
