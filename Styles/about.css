@@ -27,7 +27,6 @@
 
 .about_content {
   padding: 0 25px;
-  text-align: center;
   font-family: var(--font-family-primary);
   color: white;
   font-size: calc(var(--heading-2) - 0.3rem);
