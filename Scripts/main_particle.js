@@ -1,6 +1,9 @@
 import Effect from "./effect.js";
 
-
+window.openInNewTab = function (url) {
+  var win = window.open(url, "_blank");
+  win.focus();
+};
 
 let canvas = document.getElementById("canvas1");
 let outer_element = document.getElementById("banner");

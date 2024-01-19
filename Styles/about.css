@@ -54,6 +54,16 @@
   width: 46%;
 }
 
+.hello{
+  font-size: 150px;
+}
+
+.my_profile{
+  width: 180px;
+  border-radius: 50%;
+  border: none;
+}
+
 @media screen and (max-width: 1023px) {
   .about_holder {
     grid-template-columns: 1fr;
@@ -75,6 +85,12 @@
 
   .about_btn {
     font-size: calc(var(--heading-2) - 0.5rem);
+  }
+  .hello{
+    font-size: 80px;
+  }
+  .my_profile{
+    width: 90px;
   }
 }
 
@@ -113,3 +129,7 @@
     opacity: 0;
   }
 }
+
+
+
+
